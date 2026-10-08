@@ -1,51 +1,66 @@
-# Customer Churn Prediction
 
-An in-progress machine learning project using the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn). The current work downloads the data, creates reproducible train, evaluation, and holdout splits, and begins exploratory data analysis. Model training, an API, and a UI are planned but are not implemented yet.
+# Churn Prediction (end to end)
 
-## Setup
+Predict which telecom customers are likely to cancel, and turn that into something a retention team can use.
 
-Python 3.10 or newer and [uv](https://docs.astral.sh/uv/) are required. From the project root, install the project and notebook dependencies:
+The project is built in public, week by week: notebooks first, then production-style Python modules, tests, an API,
+a UI, and finally deployment. The structure follows the "production-ready ML" approach from The Neural Maze.
+
+## Where we are
+
+| Week | Topic | Status |
+|---|---|---|
+| 1 | Project setup, data download, split, EDA | ✅ `notebooks/00_data_split.ipynb`, `notebooks/01_EDA_cleaning.ipynb` |
+| 2 | Validation (Great Expectations), cleaning, feature engineering | ⏳ |
+| 3 | Baselines and imbalance | ⏳ |
+| 4 | XGBoost, tuning (Optuna), tracking (MLflow) | ⏳ |
+| 5 | Inference pipeline and FastAPI | ⏳ |
+| 6 | UI and first deployment | ⏳ |
+| 7 | Docker, AWS | ⏳ |
+| 8 | CI/CD, monitoring | ⏳ |
+
+## Quick start
+
+You need [uv](https://docs.astral.sh/uv/) and Git. No other setup.
 
 ```bash
-uv sync --group dev
+git clone <this-repo-url>
+cd churn-prediction-mle
+
+uv sync                                   # creates .venv and installs everything from uv.lock
+uv run python -m ipykernel install --user --name churn-mle --display-name "Python (churn-mle)"
+
+uv run python -m src.feature_pipeline.load   # downloads the dataset from Kaggle into data/raw/
+uv run pytest                                # run the tests
 ```
 
-Open the notebooks in your preferred notebook editor and select the project's `.venv/bin/python` interpreter as the kernel. Run them in order:
+Then open the notebooks in VS Code or Jupyter and select the **Python (churn-mle)** kernel.
+Run `00_data_split.ipynb` first, then `01_EDA_cleaning.ipynb`.
 
-1. `notebooks/00_data_split.ipynb` downloads the CSV and creates the splits.
-2. `notebooks/01_EDA_cleaning.ipynb` loads the train and evaluation sets for initial exploration.
-
-The first download needs internet access. The download helper reuses `data/raw/telco_churn.csv` on later runs. You can also run the helper from the project root:
-
-```bash
-uv run python -m src.feature_pipeline.load
-```
-
-## Data workflow
-
-The source dataset contains 7,043 customers and 21 columns, including the `Churn` target. `00_data_split.ipynb` uses a stratified random split on `Churn` with seed `42`, preserving approximately the same churn rate in each set:
-
-| Split | Share | Current rows | Purpose |
-| --- | ---: | ---: | --- |
-| Train | 70% | 4,930 | Exploration and fitting |
-| Evaluation | 15% | 1,056 | Model selection and tuning |
-| Holdout | 15% | 1,057 | Final assessment |
-
-The notebook checks that the sets contain distinct `customerID` values and together cover all source rows. It writes `data/raw/train.csv`, `data/raw/eval.csv`, and `data/raw/holdout_df`. The holdout file currently has no `.csv` extension, although it contains CSV data. Keep the holdout set out of exploration and tuning.
-
-The `data/` directory is ignored by Git, so downloaded data and generated splits stay local.
+If the Kaggle download is blocked on your network, download the CSV by hand from
+<https://www.kaggle.com/datasets/blastchar/telco-customer-churn> and save it as `data/raw/telco_churn.csv`.
 
 ## Project layout
 
-```text
-configs/                  Configuration files (currently empty)
-notebooks/
-  00_data_split.ipynb     Download, inspect, and split the dataset
-  01_EDA_cleaning.ipynb   Initial train/evaluation exploration
-src/
-  feature_pipeline/load.py  Kaggle download helper
-  utils/paths.py            Project data and other directory paths
-tests/                    Tests (currently empty)
+```
+churn-prediction-mle/
+├── configs/                 # YAML configs (validation rules, app settings)   [Week 2+]
+├── data/                    # NOT in git. raw/ and processed/ are created by the code
+├── models/                  # trained models and fitted encoders              [Week 3+]
+├── notebooks/               # exploration, one notebook per step
+├── src/
+│   ├── utils/paths.py       # project root and data paths (works on any machine)
+│   ├── feature_pipeline/    # load -> preprocess -> feature engineering
+│   ├── training_pipeline/   # train, tune, evaluate                           [Week 3+]
+│   ├── inference_pipeline/  # predict with saved artefacts                    [Week 5+]
+│   └── api/                 # FastAPI service                                 [Week 5+]
+├── tests/
+└── pyproject.toml           # dependencies (managed with uv)
 ```
 
-The EDA notebook is still in progress. Data cleaning, feature engineering, model training, evaluation, and serving have not been added yet.
+## Conventions
+
+- **No hard-coded paths.** Everything comes from `src/utils/paths.py`, which finds the project root by locating `pyproject.toml`.
+- **Data never goes to Git.** It is downloaded by code. See `.gitignore`.
+- **Split first, explore after.** EDA only looks at the training split. The holdout set is used once, at the end.
+- **Notebooks explore, `src/` ships.** Logic proven in a notebook moves into a tested module.
