@@ -3,7 +3,6 @@
 
 models/**
 
-# Python caches and generated validation reports
+# Python caches
 __pycache__/
 *.py[cod]
-/reports/

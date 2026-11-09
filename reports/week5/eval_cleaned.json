@@ -1,0 +1,984 @@
+{
+  "success": true,
+  "results": [
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "min_value": 1
+        },
+        "meta": {},
+        "id": "c88077f5-dd9e-4d42-85fb-50d9f2fb4059",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "customerID"
+        },
+        "meta": {},
+        "id": "d62a59b1-b14d-43e1-a336-c50f0389ce6b",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "customerID"
+        },
+        "meta": {},
+        "id": "6acc7104-27fd-434f-90f5-6831c9241045",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "gender"
+        },
+        "meta": {},
+        "id": "e36be793-ca60-4320-baa7-64e8932a20bd",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "gender",
+          "value_set": [
+            "Male",
+            "Female"
+          ]
+        },
+        "meta": {},
+        "id": "5554a227-eb85-4cfa-a5eb-fc2c984c2b1a",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "SeniorCitizen"
+        },
+        "meta": {},
+        "id": "dd1cb724-9547-4da1-a1ab-2e7d592abffc",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "SeniorCitizen",
+          "value_set": [
+            0,
+            1
+          ]
+        },
+        "meta": {},
+        "id": "612be4f3-9a0e-404f-ab66-1f49ff254e2c",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Partner"
+        },
+        "meta": {},
+        "id": "fdc177db-d064-41af-871f-39f125a43c09",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Partner",
+          "value_set": [
+            "Yes",
+            "No"
+          ]
+        },
+        "meta": {},
+        "id": "72b15831-6aad-4fc2-974f-3b5add2d6b7e",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Dependents"
+        },
+        "meta": {},
+        "id": "1d875004-f54a-4315-ae62-1d4a9f7e5ff4",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Dependents",
+          "value_set": [
+            "Yes",
+            "No"
+          ]
+        },
+        "meta": {},
+        "id": "df005f1b-4947-421a-b4eb-0470b2fbbebf",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "tenure"
+        },
+        "meta": {},
+        "id": "e3480957-7a65-4ced-8cf8-de20230de334",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "tenure",
+          "min_value": 0.0
+        },
+        "meta": {},
+        "id": "7033b1eb-01b1-4546-a3c7-c5c3391773a4",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "PhoneService"
+        },
+        "meta": {},
+        "id": "b27ef30a-e4dd-41b4-9b2e-660bbfed0065",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "PhoneService",
+          "value_set": [
+            "Yes",
+            "No"
+          ]
+        },
+        "meta": {},
+        "id": "9678152d-970e-47f3-9872-c7745751bd08",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "MultipleLines"
+        },
+        "meta": {},
+        "id": "9e79c9f7-8bbc-4ba2-980b-0c4855b1bcc5",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "MultipleLines",
+          "value_set": [
+            "Yes",
+            "No",
+            "No phone service"
+          ]
+        },
+        "meta": {},
+        "id": "30d563ad-773f-47c8-8728-b285119dfd90",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "InternetService"
+        },
+        "meta": {},
+        "id": "3e54cec4-c14d-4fec-b45c-ae10800dff11",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "InternetService",
+          "value_set": [
+            "DSL",
+            "Fiber optic",
+            "No"
+          ]
+        },
+        "meta": {},
+        "id": "c04de481-78bd-4e2e-a420-0282fc2c1ae9",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "OnlineSecurity"
+        },
+        "meta": {},
+        "id": "5dc46781-259f-46ea-97e0-f85e16afd41a",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "OnlineSecurity",
+          "value_set": [
+            "Yes",
+            "No",
+            "No internet service"
+          ]
+        },
+        "meta": {},
+        "id": "494b166b-daa4-4cd7-bb76-89c95a218bd4",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "OnlineBackup"
+        },
+        "meta": {},
+        "id": "ecae7cb5-8202-4da5-80a5-9aee273433b9",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "OnlineBackup",
+          "value_set": [
+            "Yes",
+            "No",
+            "No internet service"
+          ]
+        },
+        "meta": {},
+        "id": "161a7b90-783d-42dd-87ff-5c87314a63dc",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "DeviceProtection"
+        },
+        "meta": {},
+        "id": "843091e4-c6f5-4967-9715-891220b3c87b",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "DeviceProtection",
+          "value_set": [
+            "Yes",
+            "No",
+            "No internet service"
+          ]
+        },
+        "meta": {},
+        "id": "4d8f7538-f29f-4c07-81bb-e59fb00916c7",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "TechSupport"
+        },
+        "meta": {},
+        "id": "cf545c0a-a38b-47ca-af49-bac59efb6e3b",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "TechSupport",
+          "value_set": [
+            "Yes",
+            "No",
+            "No internet service"
+          ]
+        },
+        "meta": {},
+        "id": "790e11f5-408a-4599-9f58-750081d3de2a",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "StreamingTV"
+        },
+        "meta": {},
+        "id": "bbe02910-7d03-430b-8593-c01694d6e7f2",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "StreamingTV",
+          "value_set": [
+            "Yes",
+            "No",
+            "No internet service"
+          ]
+        },
+        "meta": {},
+        "id": "b7d0a010-c938-46c0-abfb-71e06b9bbadd",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "StreamingMovies"
+        },
+        "meta": {},
+        "id": "e5d3a097-f0a0-499b-9862-f6866a3370e3",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "StreamingMovies",
+          "value_set": [
+            "Yes",
+            "No",
+            "No internet service"
+          ]
+        },
+        "meta": {},
+        "id": "93c53b3a-528e-4e41-892e-3bf20a2fbce4",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Contract"
+        },
+        "meta": {},
+        "id": "847154a5-a13b-411a-9b33-c9042d9dea5e",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Contract",
+          "value_set": [
+            "Month-to-month",
+            "One year",
+            "Two year"
+          ]
+        },
+        "meta": {},
+        "id": "a927d8e3-8db3-4ae7-bd12-85dc6ead2e92",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "PaperlessBilling"
+        },
+        "meta": {},
+        "id": "b243f597-efb7-4dc8-bb45-0f3d10cf54ee",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "PaperlessBilling",
+          "value_set": [
+            "Yes",
+            "No"
+          ]
+        },
+        "meta": {},
+        "id": "3595115a-ed3b-4ccd-8a31-3b19401b71be",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "PaymentMethod"
+        },
+        "meta": {},
+        "id": "399b75bc-17a5-4fb0-9435-5887bca920f3",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "PaymentMethod",
+          "value_set": [
+            "Electronic check",
+            "Mailed check",
+            "Bank transfer (automatic)",
+            "Credit card (automatic)"
+          ]
+        },
+        "meta": {},
+        "id": "b4101469-d480-4518-b00e-d5735f0dfdcc",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "MonthlyCharges"
+        },
+        "meta": {},
+        "id": "c7c3b78b-281b-4107-ba58-b7eb5dc3f4e3",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "MonthlyCharges",
+          "min_value": 0.0
+        },
+        "meta": {},
+        "id": "8fc3aa0e-de25-4e97-a4f9-7ec0cbbe22e5",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "TotalCharges"
+        },
+        "meta": {},
+        "id": "3b7d0895-d262-4703-82c0-6cc883809a61",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "TotalCharges",
+          "min_value": 0.0
+        },
+        "meta": {},
+        "id": "7bc3def7-57e7-4a11-a95c-8ea94aff0839",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Churn"
+        },
+        "meta": {},
+        "id": "1bcd9a7e-38bb-4be5-9051-7475510be2cc",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "churn-customers",
+          "column": "Churn",
+          "value_set": [
+            0,
+            1
+          ]
+        },
+        "meta": {},
+        "id": "8cba25f7-8f32-4e35-ad3f-799140f14354",
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    }
+  ],
+  "suite_name": "cleaned",
+  "suite_parameters": {},
+  "statistics": {
+    "evaluated_expectations": 43,
+    "successful_expectations": 43,
+    "unsuccessful_expectations": 0,
+    "success_percent": 100.0
+  },
+  "meta": {
+    "great_expectations_version": "1.24.1",
+    "batch_spec": {
+      "batch_data": "PandasDataFrame"
+    },
+    "batch_markers": {
+      "ge_load_time": "20261109T224946.573109Z",
+      "pandas_data_fingerprint": "07097c2eb85efccef88f75df360aafdc"
+    },
+    "active_batch_definition": {
+      "datasource_name": "churn",
+      "data_connector_name": "fluent",
+      "data_asset_name": "customers",
+      "batch_identifiers": {
+        "dataframe": "<DATAFRAME>"
+      }
+    },
+    "validation_id": "51952505-9520-4d88-9e58-c78f96129025",
+    "checkpoint_id": null,
+    "run_id": {
+      "run_name": null,
+      "run_time": "2026-11-09T23:49:46.920329+01:00"
+    },
+    "validation_time": "2026-11-09T22:49:46.920329+00:00",
+    "batch_parameters": {
+      "dataframe": "<DATAFRAME>"
+    }
+  },
+  "id": null
+}
